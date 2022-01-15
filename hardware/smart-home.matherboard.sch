@@ -64,8 +64,10 @@
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="58" name="bCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="61" name="stand" color="7" fill="1" visible="no" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -134,6 +136,9 @@
 <layer number="153" name="FabDoc1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="154" name="FabDoc2" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="155" name="FabDoc3" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="160" name="O_Dim" color="7" fill="1" visible="no" active="yes"/>
+<layer number="166" name="AntennaArea" color="7" fill="1" visible="no" active="no"/>
+<layer number="168" name="4mmHeightArea" color="7" fill="1" visible="no" active="no"/>
 <layer number="191" name="mNets" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="192" name="mBusses" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="193" name="mPins" color="7" fill="1" visible="yes" active="yes"/>
@@ -8789,6 +8794,64 @@ https://www.justars.com.tw/jupyter/wp-content/uploads/2017/05/A2501WV-XPNXXXXXXX
 </deviceset>
 </devicesets>
 </library>
+<library name="switch">
+<description>Переключатели и кнопки</description>
+<packages>
+<package name="SKRKAEE020">
+<text x="-3.38" y="2.81" size="1.778" layer="25">&gt;NAME</text>
+<text x="-3.38" y="-4.81" size="1.778" layer="27">&gt;VALUE</text>
+<wire x1="-1.95" y1="1.45" x2="1.95" y2="1.45" width="0.2" layer="21"/>
+<wire x1="1.95" y1="1.45" x2="1.95" y2="-1.45" width="0.2" layer="21"/>
+<wire x1="1.95" y1="-1.45" x2="-1.95" y2="-1.45" width="0.2" layer="21"/>
+<wire x1="-1.95" y1="-1.45" x2="-1.95" y2="1.45" width="0.2" layer="21"/>
+<smd name="1" x="-2.1" y="0" dx="1" dy="2" layer="1"/>
+<smd name="2" x="2.1" y="0" dx="1" dy="2" layer="1"/>
+<circle x="0" y="0" radius="0.9" width="0.2" layer="21"/>
+<rectangle x1="-1.25" y1="-1" x2="1.25" y2="1" layer="29"/>
+<rectangle x1="-1.25" y1="-1" x2="1.25" y2="1" layer="41"/>
+</package>
+</packages>
+<symbols>
+<symbol name="TS">
+<wire x1="0" y1="-3.175" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="3.175" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-0.635" y2="0" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="1.905" x2="-3.175" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="-1.905" x2="-3.175" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="1.905" x2="-4.445" y2="0" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="0" x2="-4.445" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.905" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-0.635" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.635" y1="0" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="0" x2="-3.175" y2="0" width="0.1524" layer="94"/>
+<text x="-6.35" y="-1.905" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="-3.81" y="3.175" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="1" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="2" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SKRKAEE020">
+<description>Manufacturered by Alps Alpine&lt;br&gt;
+Tactile Switches&lt;br&gt;
+SKRKAEE020</description>
+<gates>
+<gate name="G$1" symbol="TS" x="0" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="SKRKAEE020">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8833,6 +8896,10 @@ https://www.justars.com.tw/jupyter/wp-content/uploads/2017/05/A2501WV-XPNXXXXXXX
 <part name="J2" library="jt" deviceset="A2501WV-04P" device=""/>
 <part name="+3V6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="ZB-RST" library="switch" deviceset="SKRKAEE020" device=""/>
+<part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="ZB-BSL" library="switch" deviceset="SKRKAEE020" device=""/>
+<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8929,6 +8996,20 @@ https://www.justars.com.tw/jupyter/wp-content/uploads/2017/05/A2501WV-XPNXXXXXXX
 <instance part="GND8" gate="1" x="223.52" y="134.62" smashed="yes" grouprefs="I2C">
 <attribute name="VALUE" x="220.98" y="132.08" size="1.778" layer="96"/>
 </instance>
+<instance part="ZB-RST" gate="G$1" x="45.72" y="96.52" smashed="yes" grouprefs="ZIGBEE">
+<attribute name="NAME" x="39.37" y="92.075" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="49.53" y="86.995" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND9" gate="1" x="45.72" y="86.36" smashed="yes" grouprefs="ZIGBEE">
+<attribute name="VALUE" x="43.18" y="83.82" size="1.778" layer="96"/>
+</instance>
+<instance part="ZB-BSL" gate="G$1" x="152.4" y="88.9" smashed="yes" grouprefs="ZIGBEE">
+<attribute name="NAME" x="146.05" y="84.455" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="156.972" y="78.105" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="GND10" gate="1" x="152.4" y="78.74" smashed="yes" grouprefs="ZIGBEE">
+<attribute name="VALUE" x="149.86" y="76.2" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9019,6 +9100,16 @@ https://www.justars.com.tw/jupyter/wp-content/uploads/2017/05/A2501WV-XPNXXXXXXX
 <pinref part="GND8" gate="1" pin="GND"/>
 <wire x1="223.52" y1="142.24" x2="223.52" y2="137.16" width="0.1524" layer="91" grouprefs="I2C"/>
 </segment>
+<segment>
+<pinref part="ZB-RST" gate="G$1" pin="1"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="45.72" y1="91.44" x2="45.72" y2="88.9" width="0.1524" layer="91" grouprefs="ZIGBEE"/>
+</segment>
+<segment>
+<pinref part="GND10" gate="1" pin="GND"/>
+<pinref part="ZB-BSL" gate="G$1" pin="1"/>
+<wire x1="152.4" y1="81.28" x2="152.4" y2="83.82" width="0.1524" layer="91" grouprefs="ZIGBEE"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -9104,6 +9195,8 @@ https://www.justars.com.tw/jupyter/wp-content/uploads/2017/05/A2501WV-XPNXXXXXXX
 <wire x1="45.72" y1="104.14" x2="35.56" y2="104.14" width="0.1524" layer="91" grouprefs="ZIGBEE"/>
 <wire x1="45.72" y1="106.68" x2="45.72" y2="104.14" width="0.1524" layer="91" grouprefs="ZIGBEE"/>
 <junction x="45.72" y="104.14" grouprefs="ZIGBEE"/>
+<pinref part="ZB-RST" gate="G$1" pin="2"/>
+<wire x1="45.72" y1="104.14" x2="45.72" y2="101.6" width="0.1524" layer="91" grouprefs="ZIGBEE"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="!CE!/GPIO7"/>
@@ -9144,6 +9237,8 @@ https://www.justars.com.tw/jupyter/wp-content/uploads/2017/05/A2501WV-XPNXXXXXXX
 <wire x1="152.4" y1="96.52" x2="154.94" y2="96.52" width="0.1524" layer="91" grouprefs="ZIGBEE"/>
 <wire x1="152.4" y1="99.06" x2="152.4" y2="96.52" width="0.1524" layer="91" grouprefs="ZIGBEE"/>
 <junction x="152.4" y="96.52" grouprefs="ZIGBEE"/>
+<pinref part="ZB-BSL" gate="G$1" pin="2"/>
+<wire x1="152.4" y1="93.98" x2="152.4" y2="96.52" width="0.1524" layer="91" grouprefs="ZIGBEE"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GPIO19"/>
